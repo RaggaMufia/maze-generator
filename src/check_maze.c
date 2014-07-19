@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <maze_gen.h>
 
-void					check_maze(t_maze *maze)
+void					check_maze(register t_maze *const maze)
 {
 	maze->width = maze->width < 2 ? 2 : maze->width;
 	maze->height = maze->height < 2 ? 2 : maze->height;

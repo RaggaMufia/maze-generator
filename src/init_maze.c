@@ -1,6 +1,6 @@
 #include <maze_gen.h>
 
-void					init_maze(t_maze *maze)
+void					init_maze(register t_maze *const maze)
 {
 	maze->start.x = 0;
 	maze->start.y = 0;

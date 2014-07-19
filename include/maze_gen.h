@@ -16,15 +16,17 @@ typedef struct			s_maze
 	t_point				start;
 	t_point				end;
 	char				**data;
-	char				*name;
+	const char			*name;
 	FILE				*file;
 }						t_maze;
 
-void					parse_pos(char *a, t_point *p);
+void					parse_pos(register const char *a,
+									register t_point *const p);
 void					check_args(const int *const argc);
-void					init_maze(t_maze *maze);
-void					parse_args(char **argv, t_maze *maze);
-void					check_maze(t_maze *maze);
-void					print_maze_struct(t_maze *maze);
+void					init_maze(register t_maze *const maze);
+void					parse_args(register const char **const argv,
+									register t_maze *const maze);
+void					check_maze(register t_maze *const maze);
+void					print_maze_struct(register const t_maze *const maze);
 
 #endif

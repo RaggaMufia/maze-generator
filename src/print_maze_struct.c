@@ -1,6 +1,6 @@
 #include <maze_gen.h>
 
-void					print_maze_struct(t_maze *maze)
+void					print_maze_struct(register const t_maze *const maze)
 {
 	dprintf(2, "maze:\n");
 	dprintf(2, "width  = %d\n", maze->width);

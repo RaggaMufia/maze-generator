@@ -1,6 +1,7 @@
 #include <maze_gen.h>
 
-void					parse_pos(char *a, t_point *p)
+void					parse_pos(register const char *const a,
+									register t_point *const p)
 {
 	int					i;
 

@@ -19,11 +19,11 @@ NAME			=	maze-gen
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(FLAGS) $(HEADER) $(OBJ) -o $@
+	@$(CC) $(FLAGS) $(HEADER) $(OBJ) -o $@
 
 $(patsubst %, $(OBJ_PATH)%,%.o): $(SRC_PATH)$(notdir %.c)
-	mkdir -p $(OBJ_PATH)
-	$(CC) -c $(FLAGS) $(HEADER) $< -o $@
+	@mkdir -p $(OBJ_PATH)
+	@$(CC) -c $(FLAGS) $(HEADER) $< -o $@
 
 clean:
 	@rm -rf $(OBJ)

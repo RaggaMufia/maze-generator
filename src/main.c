@@ -1,6 +1,6 @@
 #include <maze_gen.h>
 
-int						main(int argc, char **argv)
+int						main(const int argc, const char **const argv)
 {
 	t_maze				maze;
 

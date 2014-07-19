@@ -1,7 +1,8 @@
 #include <stdlib.h>
 #include <maze_gen.h>
 
-void					parse_args(char **argv, t_maze *maze)
+void					parse_args(register const char **const argv,
+									register t_maze *const maze)
 {
 	maze->width = atoi(argv[1]);
 	maze->height = atoi(argv[2]);
