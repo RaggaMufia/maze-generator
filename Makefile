@@ -5,7 +5,6 @@ SRC				=	main.c \
 					parse_pos.c \
 					check_args.c \
 					init_maze.c \
-					parse_args.c \
 					check_maze.c \
 					print_maze_struct.c
 

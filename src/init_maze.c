@@ -1,14 +1,14 @@
+#include <stdlib.h>
 #include <maze_gen.h>
 
-void					init_maze(register t_maze *const maze)
+void					init_maze(register t_maze *const maze,
+									register const char **const argv)
 {
-	maze->start.x = 0;
-	maze->start.y = 0;
-	maze->end.x = 0;
-	maze->end.y = 0;
-	maze->width = 0;
-	maze->height = 0;
+	maze->width = atoi(argv[1]);
+	maze->height = atoi(argv[2]);
+	parse_pos(argv[3], &maze->start);
+	parse_pos(argv[4], &maze->end);
+	maze->name = argv[5];
 	maze->data = NULL;
-	maze->name = NULL;
 	maze->file = NULL;
 }
