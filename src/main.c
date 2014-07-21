@@ -2,7 +2,7 @@
 
 void					generate_path(t_maze *maze)
 {
-	(void)maze;
+	
 }
 
 void					generate_maze(t_maze *maze)
