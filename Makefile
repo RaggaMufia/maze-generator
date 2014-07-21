@@ -6,12 +6,16 @@ SRC				=	main.c \
 					check_args.c \
 					init_maze.c \
 					check_maze.c \
-					print_maze_struct.c
+					print_maze_struct.c \
+					print_maze.c \
+					generate_corridor.c \
+					free_array.c \
+					create_maze.c
 
 OBJ				=	$(patsubst %.c, $(OBJ_PATH)%.o,$(SRC))
 
 CC				=	gcc
-FLAGS			=	-O3 -Wall -Werror -Wextra
+FLAGS			=	-g -O3 -Wall -Werror -Wextra
 HEADER			=	-I./include
 NAME			=	maze-gen
 
