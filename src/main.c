@@ -25,11 +25,45 @@ void					get_random_path_dir(register t_point *const dir,
 	}
 }
 
+int						check_empty_around_point(t_maze *maze, t_point *p)
+{
+	int					c;
+
+	if (maze->data[p->y][p->x] != EMPTY)
+		return (0);
+	if (maze->data[p->y][p->x] != )
+	c = 0;
+	c += maze->data[p->y - 1][p->x - 1] != EMPTY;
+	c += maze->data[p->y - 1][p->x] != EMPTY;
+	c += maze->data[p->y - 1][p->x + 1] != EMPTY;
+	c += maze->data[p->y][p->x - 1] != EMPTY;
+	c += maze->data[p->y][p->x + 1] != EMPTY;
+	c += maze->data[p->y + 1][p->x - 1] != EMPTY;
+	c += maze->data[p->y + 1][p->x] != EMPTY;
+	c += maze->data[p->y + 1][p->x + 1] != EMPTY;
+	if (c > 1)
+		return (0);
+	return (1);
+}
+
+int						check_within_borders(t_point *p, int *w, int *h)
+{
+	if (p.x < 1 || p.y < 1 || p.x > *w - 2 || p.y > *h - 2)
+		return (0);
+	return (1);
+}
+
+int						generate_cell(t_maze *maze, t_point p)
+{
+	if (!check_within_borders(&p, &maze->width, &maze->height))
+		return (0);
+	if ()
+}
+
 void					generate_main_path(t_maze *maze)
 {
 	t_point				current;
 	t_point				dir;
-	t_point				old_dir;
 
 	current.x = maze->start.x;
 	current.y = maze->start.y;
